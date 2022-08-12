@@ -49,14 +49,14 @@
 </head>
 <body>
   <script>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxmpr9PrhxFm-BDq7RZ1X6ytsxBC-m72oMHNnaJlEJ33Sm1MQsPZtcgItdbsIhMYSgYdA/exec";
+    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxV0xJSG5QP8SjpB-Vz-p8hqB4fSfKL0cH0e35AFXLqBdC4lPw6mmAQIrtVaTP9JPG9/exec";
     
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=")+2);  
     
     if(k){
       fetch(AS_URL_BASE+'?k='+k)
-      .then(r => r.text())
+      .then(r => r.text())    
       .then((r) => {
         console.log(r);
         //document.write(r);
